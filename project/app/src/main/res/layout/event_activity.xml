@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:layout_weight="0.12">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="졸업프로젝트 모임"
+                android:textColor="#FFFFFF"
+                android:textSize="22dp"
+                android:textAlignment="center"
+                android:background="#2A93D5"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                ></Space>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일정 제목"
+                android:id="@+id/title"
+                android:textSize="20dp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="모임 장소"
+                android:id="@+id/venue"
+                android:textSize="20dp"
+                ></TextView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFE">
+
+        <Button
+            android:layout_alignParentLeft="true"
+            android:id="@+id/share"
+            android:textSize="17dp"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/ic_baseline_grid_on_24"
+            android:text="분류하기"
+
+            android:textColor="#2A93D5"
+            tools:ignore="MissingConstraints"></Button>
+
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:textSize="17dp"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/image"
+            android:text="갤러리"
+
+            android:textColor="#2A93D5"
+            tools:ignore="MissingConstraints"></Button>
+
+
+    </RelativeLayout>
+    <SlidingDrawer
+        android:layout_alignParentBottom="true"
+        android:id="@+id/slide"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:allowSingleTap="true"
+        android:animateOnClick="true"
+        android:bottomOffset="5dp"
+        android:content="@+id/content"
+        android:handle="@+id/handle"
+        android:orientation="vertical"
+        android:topOffset="60dp"
+        >
+        <ImageView
+            android:id="@+id/handle"
+            app:srcCompat="@drawable/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFFFF"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="일정 만들기"
+                android:textSize="20dp"
+                android:textColor="#000000"></TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:hint="일정 제목을 입력하시오"></EditText>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="458dp"
+                android:layout_height="50dp"
+                android:background="#FFFFFF"
+                android:text="시작                 2020년 2월 2일 22시 11분" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="468dp"
+                android:layout_height="50dp"
+                android:background="#FFFFFF"
+                android:text="종료                 2020년 2월 2일 22시 11분" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="18dp"
+                    android:layout_height="wrap_content">
+
+                </Space>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="장소"
+                    android:textColor="#000000"
+                    android:textSize="20dp"></TextView>
+
+                <Space
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content">
+
+                </Space>
+
+                <EditText
+                    android:id="@+id/venuename"
+                    android:layout_width="213dp"
+                    android:layout_height="wrap_content"
+                    android:hint="장소를 입력하시오"></EditText>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnclose"
+                android:layout_width="420dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+
+                android:text="확인" />
+        </LinearLayout>
+    </SlidingDrawer>
+
+
+</RelativeLayout>
